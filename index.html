@@ -1,6 +1,122 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Minimum Sentencing</title>
-  </head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue" rel="stylesheet">
+  <title>Minimum Sentencing</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/7801/7801147.png">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    header span.red {
+        color: #ee6d6b;
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: 0.5px;
+        font-size: 2.5rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      background: #1e1e1e;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      color: #90caf9;
+      border-left: 5px solid #2196f3;
+      padding-left: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1f1f1f;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    a:link {
+      color: #90caf9;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>What are <span class="red" font-family="Bebas Neue">Mandatory Minimums</span> REALLY doing?</h1>
+    <p>A critical evaluation of sentencing laws and their consequences</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Disproportionate Punishments</h2>
+      <p>[Your argument text here.]</p>
+    </section>
+
+    <section>
+      <h2>Racial and Economic Inequities</h2>
+      <p>[Your argument text here.]</p>
+    </section>
+
+    <section>
+      <h2>Judicial Discretion Erosion</h2>
+      <p>[Your argument text here.]</p>
+    </section>
+
+    <section>
+      <h2>Overcrowded Prisons</h2>
+      <p>[Your argument text here.]</p>
+    </section>
+
+    <section>
+      <h2>Effective Alternatives</h2>
+      <p>[Your argument text here.]</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Justice Reform Advocates | <a href="https://google.com">Contact Us</a>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
 </html>
